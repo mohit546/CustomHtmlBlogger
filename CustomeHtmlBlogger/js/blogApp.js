@@ -1,4 +1,4 @@
-angular.module('myBlog', ['myBlog.Controller','ngRoute'])
+angular.module('myBlog', ['myBlog.Controller','ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
 
 	$stateProvider
