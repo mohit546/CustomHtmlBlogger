@@ -20,6 +20,6 @@
     "angular": "~1.4.8",
     "bower": "*",
     "install": "~1.0.4",
-    "angular-route": "~1.4.8"
+
   }
 }
