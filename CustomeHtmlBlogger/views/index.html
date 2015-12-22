@@ -2,16 +2,23 @@
 	<head>
 		<title>Blog</title>
 
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
 	</head>
 
 	<body ng-app="myBlog" ng-controller="mainCtrl">
 
-		<p>hello</p>
-
-
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="../bower_components/angular/angular.min.js"></script>
 		<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="../js/blogApp.js"></script>
 		<script src="../js/controllers/mainCtrl.js"></script>
+
+
+
+
+		<div ui-view></div>
 	</body>
 </html>
