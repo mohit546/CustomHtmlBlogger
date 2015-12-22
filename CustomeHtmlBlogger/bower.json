@@ -19,7 +19,7 @@
   "dependencies": {
     "angular": "~1.4.8",
     "bower": "*",
-    "install": "~1.0.4",
+    "install": "~1.0.4"
 
   }
 }
