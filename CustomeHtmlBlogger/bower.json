@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.8",
+    "angular": "1.4.8",
     "bower": "*",
     "install": "~1.0.4",
     "angular-ui-router": "~0.2.15"
