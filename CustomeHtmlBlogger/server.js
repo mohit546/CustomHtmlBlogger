@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
 var config = require('./config');
+var passport = require('passport');
 
 var app = express();
 
@@ -27,8 +28,12 @@ app.get('/login',function(req,res){
 	res.sendFile(__dirname + '/public/loginApp/html/loginIndex.html');
 })
 
-app.get('*',function(req,res){
+app.get('/home/progress',function(req,res){
 	res.sendFile(__dirname + '/public/under_construction/underConstruction.html');
+})
+
+app.get('/home',function(req,res){
+	res.sendFile(__dirname + '/public/views/index.html');
 });
 
 app.listen(config.port, function(err){

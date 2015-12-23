@@ -1,5 +1,5 @@
 angular.module('loginApp.controller', [])
-.controller('loginCtrl', function($scope, loginService){
+.controller('loginCtrl', function($scope, loginService, $window){
 	console.log('loginCtrl');
 
 	$scope.userEmail = null;
@@ -16,6 +16,12 @@ angular.module('loginApp.controller', [])
 		var dataPromis = loginService.loginRequest($scope.userEmail, $scope.userPassword);
 		dataPromis.then(function(result){
 			console.log(result);
+			if(!result.status){
+				console.log('error');
+			}else{
+				$window.localStorage.setItem('token', result.token);
+				$window.location.href = result.redirectUrl;
+			}
 		});
 	};
 
@@ -23,6 +29,11 @@ angular.module('loginApp.controller', [])
 		var dataPromis = loginService.signUpRequest($scope.newUserEmail, $scope.newUserPassword, $scope.newUserRepeatPassword);
 		dataPromis.then(function(result){
 			console.log(result);
+			if(!result.status){
+				console.log('error');
+			}else{
+				$window.localStorage.setItem('token', result.token);
+			}
 		});
 	};
 

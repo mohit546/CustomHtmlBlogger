@@ -75,12 +75,14 @@ module.exports = function(app, express){
 					res.json({
 						status : true,
 						message : 'Successfully login',
-						token : token
+						token : token,
+						redirectUrl: '/home'
 					});
 				}
 			}
 		});
 	});
+
 
 	api.use(function(req, res, next){
 		console.log("he there");
@@ -102,10 +104,21 @@ module.exports = function(app, express){
 		}
 	});
 
-
 	api.get('/me',function(req, res){
-		res.json(req.decoded);
+		User.findOne({
+			_id : req.decoded.id
+		},function(err, doc){
+			if(err){
+				res.status(403).send({status: false, message: 'User is not Valid'});
+			}else{
+				res.json({
+					status : true,
+					userDetail: doc
+				});
+			}
+		});
 	});
+
 
 	return api;
 
