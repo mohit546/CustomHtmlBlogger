@@ -1,6 +1,6 @@
-angular.module('myBlog.Controller', [])
+angular.module('myBlog.controller', [])
 .controller('mainCtrl', function($scope, networkCall, $timeout, $window){
-
+	console.log('mainCtrl is loaded');
 
 	// $scope.$on("$stateChangeStart", function(){
 

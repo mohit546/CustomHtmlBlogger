@@ -4,12 +4,27 @@
 		<title>Blog</title>
 
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/semantic.min.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 
 	</head>
 
 	<body ng-app="myBlog" ng-controller="mainCtrl">
 
+<div class="ui sidebar inverted vertical menu">
+			<a class="item">
+				Home
+			</a>
+			<a class="item">
+				My Account
+			</a>
+			<a class="item">
+				My Blog
+			</a>
+		</div>
+
+		<div class="pusher">
+		<!-- Site content !-->
 
 
 
@@ -43,20 +58,23 @@
 	</nav>
 
 
-
-
 		<div ui-view></div>
 
-
+</div>
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="semantic/dist/semantic.min.js"></script>
+		<script src="bower_components/semantic/dist/semantic.min.js"></script>
 
 		<script src="js/blogApp.js"></script>
 		<script src="js/controllers/mainCtrl.js"></script>
 		<script src="js/services/service.js"></script>
+
+
+
+		<script src="js/controllers/dashboardCtrl.js"></script>
+
 	</body>
 </html>

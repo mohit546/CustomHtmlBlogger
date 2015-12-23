@@ -1,4 +1,4 @@
-angular.module('myBlog', ['myBlog.Controller', 'myBlog.service', 'ui.router', 'ui.bootstrap'])
+angular.module('myBlog', ['myBlog.controller', 'myBlog.service', 'ui.router', 'ui.bootstrap'])
 .config(function($stateProvider, $urlRouterProvider){
 
 	$stateProvider
@@ -8,12 +8,8 @@ angular.module('myBlog', ['myBlog.Controller', 'myBlog.service', 'ui.router', 'u
 	// })
 	.state('dashboard', {
 		url: '/dashboard',
-		templateUrl: 'views/templates/dashboard.html'
-	})
-	.state('login', {
-		url: '/login',
-		templateUrl: 'views/templates/login.html',
-		controller: 'loginCtrl'
+		templateUrl: 'views/templates/dashboard.html',
+		controller: 'dashboardCtrl'
 	});
 
 	$urlRouterProvider.otherwise('/dashboard');
