@@ -28,7 +28,7 @@ app.get('/login',function(req,res){
 })
 
 app.get('*',function(req,res){
-	res.sendFile(__dirname + '/public/loginApp/html/loginIndex.html');
+	res.sendFile(__dirname + '/public/under_construction/underConstruction.html');
 });
 
 app.listen(config.port, function(err){
