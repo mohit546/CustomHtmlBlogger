@@ -5,7 +5,7 @@ angular.module('myBlog.controller')
 
 	$scope.toggleSideBar = function(){
 		console.log('sideBar');
-		$('.ui.sidebar').sidebar('toggle');
+		$('.ui.labeled.icon.sidebar').sidebar('toggle');
 	};
 
 });
