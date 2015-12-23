@@ -26,4 +26,8 @@ angular.module('loginApp.controller', [])
 		});
 	};
 
+	$scope.signInFacebook= function(){};
+
+	$scope.signInGoogle= function(){};
+
 });
