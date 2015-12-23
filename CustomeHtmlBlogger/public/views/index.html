@@ -1,18 +1,14 @@
 <html>
 	<head>
+
 		<title>Blog</title>
 
-	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 	</head>
 
 	<body ng-app="myBlog" ng-controller="mainCtrl">
 
-		<div class="row">
-			<div class="col-sm-12 well">
-				{{4+4}}
-			</div>
-		</div>
 
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
@@ -20,10 +16,9 @@
 		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="js/blogApp.js"></script>
+
 		<script src="js/controllers/mainCtrl.js"></script>
 
-
-		<button class="btn btn-info" ui-sref="dashboard">Dashboard</button>
 
 		<div ui-view></div>
 	</body>
