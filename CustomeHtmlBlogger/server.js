@@ -22,8 +22,13 @@ var api = require('./app/route/api')(app, express);
 app.use('/api',api);
 
 app.use(express.static(__dirname + '/public'));
+
+app.get('/login',function(req,res){
+	res.sendFile(__dirname + '/public/loginApp/html/loginIndex.html');
+})
+
 app.get('*',function(req,res){
-	res.sendFile(__dirname + '/public/views/index.html');
+	res.sendFile(__dirname + '/public/loginApp/html/loginIndex.html');
 });
 
 app.listen(config.port, function(err){
