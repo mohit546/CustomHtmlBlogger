@@ -4,9 +4,8 @@ var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
 
 var UserSchema = Schema({
-	name: String,
-	username: {type : String, require: true, index:{unique:true}},
-	password: {type : String, require: true, select: false},
+	useremail: {type : String, require: true, index:{unique:true}},
+	password: {type : String, require: true, select: false}
 });
 
 UserSchema.pre('save',function(next,done){
@@ -23,10 +22,10 @@ UserSchema.pre('save',function(next,done){
 	});
 });
 
-UserSchema.method.comparePassword = function(password){
+UserSchema.methods.comparePassword = function(password){
 	var user = this;
 
-	return bcrypt.compareSync(password.user.password);
+	return bcrypt.compareSync(password, user.password);
 };
 
-module.exports = mongoose.model('User',UserSchema);
+module.exports = mongoose.model('User', UserSchema);

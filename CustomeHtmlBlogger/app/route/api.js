@@ -12,7 +12,7 @@ var createToken = function(user){
 	var token = jsonWebToken.sign({
 		id : user._id,
 		name : user.name,
-		username : user.username
+		userEmail : user.userEmail
 	}, secretKey, {
 		expireInMinute : 1500
 	});
@@ -28,9 +28,8 @@ module.exports = function(app, express){
 		console.log(req.body);
 
 		var user = new User({
-			name : req.body.name,
-			username : req.body.username,
-			password : req.body.password
+			useremail : req.body.userEmail,
+			password : req.body.password1
 		});
 
 		user.save(function(err){
@@ -59,7 +58,7 @@ module.exports = function(app, express){
 	api.post('/login',function(req,res){
 		console.log(req.body.password);
 		User.findOne({
-			username : req.body.username
+			useremail : req.body.userEmail
 		}).select('password').exec(function(err, user){
 			if(err) throw err;
 
