@@ -11,7 +11,6 @@ var createToken = function(user){
 
 	var token = jsonWebToken.sign({
 		id : user._id,
-		name : user.name,
 		userEmail : user.userEmail
 	}, secretKey, {
 		expireInMinute : 1500
