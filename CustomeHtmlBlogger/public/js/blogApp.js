@@ -7,11 +7,15 @@ angular.module('myBlog', ['myBlog.Controller', 'ui.router', 'ui.bootstrap'])
 		url: '/home'
 	})
 	.state('dashboard', {
-		url: '/dashboard/',
+		url: '/dashboard',
 		templateUrl: 'views/templates/dashboard.html'
+	})
+	.state('login', {
+		url: '/login',
+		templateUrl: 'views/templates/login.html'
 	});
 
-	$urlRouterProvider.otherwise('/dashboard/');
+	$urlRouterProvider.otherwise('/dashboard');
 
 });
 
