@@ -5,23 +5,63 @@
 		padding: 20px;
 	}
 </style>
-
+<!--
 <div class="container-fluid">
-
-	<button class="ui purple button" ng-click="toggleSideBar();">
-		<!-- <i class="fa fa-align-justify fa-lg"></i> -->
-		<i class="large sidebar icon" style="margin: 0px;"></i>
-	</button>
-
-	<div class="container">
+	<div class="container"> -->
 
 
+<div class="ui grid container">
+	<div class="ui grid">
+		<!-- <div class="two column row"> -->
+			<div class="column">
+				<button class="ui purple button" ng-click="toggleSideBar();">
+					<i class="large sidebar icon" style="margin: 0px;"></i>
+				</button>
+			</div>
+		<!-- </div> -->
+	</div>
+</div>
+	<!-- <div class="row" style="margin-bottom: 20px;">
+		<div class="col-sm-12">
+		</div>
+	</div> -->
 
-		<div class="row">
+<div class="ui grid container">
 
-			<div class="col-sm-1"></div>
+	<div class="ui relaxed stackable grid">
+		<div class="four wide column" ng-repeat="i in [1,2,3,4,5,6,7,8]">
 
-			<div class="col-sm-10">
+			<div class="ui link cards">
+				<div class="card">
+					<div class="image">
+						<img src="bower_components/semantic/examples/assets/images/avatar/nan.jpg">
+					</div>
+					<div class="content">
+						<div class="header">Matt Giampietro</div>
+						<div class="meta">
+							<a>Friends</a>
+						</div>
+						<div class="description">
+							Matthew is an interior designer living in New York.
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							Joined in 2013
+						</span>
+						<span>
+							<i class="user icon"></i>
+							75 Friends
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+			<!-- <div class="col-sm-8">
 				<div class="blogPreview">
 					<div class="row">
 
@@ -35,10 +75,5 @@
 
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="col-sm-1"></div>
-
-		</div>
-	</div>
-</div>
